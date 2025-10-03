@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,11 +19,27 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="de">
+      <body className="font-sans min-h-screen flex flex-col">
+        {/* Header / Navigation */}
+        <header className="w-full bg-gray-100 dark:bg-gray-900 py-4 shadow flex justify-center">
+          <nav className="flex gap-8">
+            <Link href="/" className="text-blue-600 hover:underline font-semibold">Home</Link>
+            <Link href="/curriculum" className="text-blue-600 hover:underline font-semibold">Lebenslauf</Link>
+            <Link href="/projects" className="text-blue-600 hover:underline font-semibold">Projekte</Link>
+            <Link href="/contact" className="text-blue-600 hover:underline font-semibold">Kontakt</Link>
+          </nav>
+        </header>
+
+        {/* Seiteninhalt */}
+        <main className="flex-1">
+          {children}
+        </main>
+
+        {/* Footer */}
+        <footer className="w-full bg-gray-100 dark:bg-gray-900 py-4 text-center text-gray-500 text-sm">
+          &copy; {new Date().getFullYear()} Anu Ratnam
+        </footer>
       </body>
     </html>
   );

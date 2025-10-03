@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
   --background: #ffffff;
@@ -14,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #2d2d2d;
     --foreground: #ededed;
   }
 }
@@ -23,4 +24,18 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Eigener Gradient für Badge und Text */
+.my-gradient {
+  background: linear-gradient(to right, #3b82f6, #22c55e); /* entspricht from-blue-500 to-green-500 */
+}
+
+/* Text-Gradient für Überschriften */
+.text-gradient {
+  background: linear-gradient(to right, #3b82f6, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
