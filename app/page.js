@@ -35,15 +35,15 @@ export default function Home() {
         <div className="w-full max-w-3xl mx-auto mt-8">
           <div className="w-full flex flex-col items-center text-center">
             <strong className="text-gradient text-5xl font-bold mb-4">Über mich</strong>
-            <div className="text-xl mb-2">Hallo, ich bin Anu – Informatiker aus Leidenschaft mit einem klaren Fokus auf Technologie und Innovation.</div>
-            <div className="text-xl mb-2">Als IT-Systemingenieur sorge ich für reibungslos laufende IT-Systeme und bringe fundierte Erfahrung in <strong>Microsoft 365, Networking und IT-Security</strong> mit. Mein Anspruch: Systeme nicht nur betreiben, sondern sie sicherer, effizienter und zukunftsfähiger machen.</div>
-            <div className="text-xl mb-2">Ich bin hungrig nach mehr Wissen, ständig am Dranbleiben – und bereit, die digitale Zukunft aktiv mitzugestalten.</div>
+            <div className="text-xl mb-2 text-center">Hallo, ich bin Anu – Informatiker aus Leidenschaft mit einem klaren Fokus auf Technologie und Innovation.</div>
+            <div className="text-l mb-2 text-center">Als IT-Systemingenieur sorge ich für reibungslos laufende IT-Systeme und bringe fundierte Erfahrung in <strong>Microsoft 365, Networking und IT-Security</strong> mit. Mein Anspruch: Systeme nicht nur betreiben, sondern sie sicherer, effizienter und zukunftsfähiger machen.</div>
+            <div className="text-l mb-2 text-center">Ich bin hungrig nach mehr Wissen – und bereit, die digitale Zukunft aktiv mitzugestalten.</div>
             <div className="mt-4 flex gap-4 justify-center">
               <a className="text-gradient" href="https://www.linkedin.com/in/anusanth-nagaratnam-130324a2/" target="_blank">
-                <i className="bi bi-linkedin"></i>
+                <i className="bi bi-linkedin" style={{ fontSize: '2.5rem' }}></i>
               </a>
               <a className="text-gradient" href="https://github.com/theroyalcoder" target="_blank">
-                <i className="bi bi-github"></i>
+                <i className="bi bi-github" style={{ fontSize: '2.5rem' }}></i>
               </a>
             </div>
           </div>

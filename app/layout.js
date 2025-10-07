@@ -22,13 +22,16 @@ export default function RootLayout({ children }) {
     <html lang="de">
       <body className="font-sans min-h-screen flex flex-col">
         {/* Header / Navigation */}
-        <header className="w-full bg-gray-100 dark:bg-gray-900 py-4 shadow flex justify-center">
-          <nav className="flex gap-8">
-            <Link href="/" className="text-blue-600 hover:underline font-semibold">Home</Link>
-            <Link href="/curriculum" className="text-blue-600 hover:underline font-semibold">Lebenslauf</Link>
-            <Link href="/projects" className="text-blue-600 hover:underline font-semibold">Projekte</Link>
-            <Link href="/contact" className="text-blue-600 hover:underline font-semibold">Kontakt</Link>
-          </nav>
+        <header className="w-full py-4 shadow flex items-center">
+          <div className="flex w-full max-w-6xl mx-auto items-center justify-between px-4">
+            <span className="text-2xl font-bold text-black dark:text-white">Anu Ratnam</span>
+            <nav className="flex gap-8 justify-end">
+              <Link href="/" className="text-navlink">Home</Link>
+              <Link href="/curriculum" className="font-semibold hover:underline text-black dark:text-white">Lebenslauf</Link>
+              <Link href="/projects" className="font-semibold hover:underline text-black dark:text-white">Projekte</Link>
+              <Link href="/contact" className="font-semibold hover:underline text-black dark:text-white">Kontakt</Link>
+            </nav>
+          </div>
         </header>
 
         {/* Seiteninhalt */}
