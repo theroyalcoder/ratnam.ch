@@ -223,59 +223,51 @@ const languages = [
 
 function Box({ title, children }) {
     return (
-        <div style={{
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            padding: "1.5rem",
-            marginBottom: "1.5rem",
-            // background: "#fafbfc",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.04)"
-        }}>
-            <h2 style={{ marginTop: 0 }}>{title}</h2>
-            {children}
+        <div className="bg-white border-4 border-black shadow-[8px_8px_0_0_#000] p-6 mb-8 flex flex-col">
+            <h2 className="text-2xl font-extrabold text-black mb-4 mt-0">{title}</h2>
+            <div className="text-lg text-black flex-1">{children}</div>
         </div>
     );
 }
 
 export default function CurriculumPage() {
     return (
-        <main style={{ maxWidth: 800, margin: "2rem auto", padding: "1rem" }}>
-            <h1>Mein Werdegang & Kompetenzen</h1>
-            <h2>Erfahrungen</h2>
+        <main className="max-w-6xl mx-auto py-16 px-0 bg-yellow-50">
+            <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 mb-12 text-center">Mein Werdegang & Kompetenzen</h1>
+            <h2 className="text-3xl font-extrabold text-black mb-8">Erfahrungen</h2>
             {work.map(({ company, date, title, place, content }) => (
                 <Box key={title} title={title}>
-                    {company}, ({place}) <br></br>
-                    {date}<br></br>
+                    <span className="font-bold">{company}</span>, <span className="italic">({place})</span><br />
+                    <span className="text-sm">{date}</span><br />
                     {content}
                 </Box>
             ))}
 
-
-            <h2>Schulischer Werdegang</h2>
+            <h2 className="text-3xl font-extrabold text-black mb-8">Schulischer Werdegang</h2>
             {school.map(({ title, content }) => (
                 <Box key={title} title={title}>
                     {content}
                 </Box>
             ))}
-            <h2>Zertifikate</h2>
+            <h2 className="text-3xl font-extrabold text-black mb-8">Zertifikate</h2>
             {certificats.map(({ title, content }) => (
                 <Box key={title} title={title}>
                     {content}
                 </Box>
             ))}
-            <h2>Fachkenntnisse</h2>
+            <h2 className="text-3xl font-extrabold text-black mb-8">Fachkenntnisse</h2>
             {knowledge.map(({ title, content }) => (
                 <Box key={title} title={title}>
                     {content}
                 </Box>
             ))}
-            <h2>Programmiersprachen</h2>
+            <h2 className="text-3xl font-extrabold text-black mb-8">Programmiersprachen</h2>
             {codinglanguages.map(({ title, content }) => (
                 <Box key={title} title={title}>
                     {content}
                 </Box>
             ))}
-            <h2>Sprachen</h2>
+            <h2 className="text-3xl font-extrabold text-black mb-8">Sprachen</h2>
             {languages.map(({ title, content }) => (
                 <Box key={title} title={title}>
                     {content}

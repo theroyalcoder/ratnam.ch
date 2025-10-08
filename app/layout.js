@@ -20,16 +20,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="de">
-      <body className="font-sans min-h-screen flex flex-col">
+      <body className="font-sans min-h-screen flex flex-col bg-yellow-50">
         {/* Header / Navigation */}
-        <header className="w-full py-4 shadow flex items-center">
+        <header className="w-full py-6 border-b-4 border-black bg-blue-400 shadow-[8px_8px_0_0_#000]">
           <div className="flex w-full max-w-6xl mx-auto items-center justify-between px-4">
-            <Link href="/" className="text-2xl font-bold text-black dark:text-white hover:underline">Anu Ratnam</Link>
-            <nav className="flex gap-8 justify-end">
-              <Link href="/" className="text-navlink">Home</Link>
-              <Link href="/curriculum" className="text-navlink">Lebenslauf</Link>
-              <Link href="/projects" className="text-navlink">Projekte</Link>
-              <Link href="/contact" className="text-navlink">Kontakt</Link>
+            <Link href="/" className="text-4xl font-extrabold text-black bg-white px-4 py-2 border-4 border-black shadow-[4px_4px_0_0_#000]">Anu Ratnam</Link>
+            <nav className="flex gap-6">
+              <Link href="/" className="text-lg font-extrabold text-black bg-yellow-300 px-3 py-1 border-4 border-black shadow-[4px_4px_0_0_#000] hover:bg-yellow-400">Home</Link>
+              <Link href="/curriculum" className="text-lg font-extrabold text-black bg-yellow-300 px-3 py-1 border-4 border-black shadow-[4px_4px_0_0_#000] hover:bg-yellow-400">Lebenslauf</Link>
+              <Link href="/projects" className="text-lg font-extrabold text-black bg-yellow-300 px-3 py-1 border-4 border-black shadow-[4px_4px_0_0_#000] hover:bg-yellow-400">Projekte</Link>
+              <Link href="/contact" className="text-lg font-extrabold text-black bg-yellow-300 px-3 py-1 border-4 border-black shadow-[4px_4px_0_0_#000] hover:bg-yellow-400">Kontakt</Link>
             </nav>
           </div>
         </header>
@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         </main>
 
         {/* Footer */}
-        <footer className="w-full py-4 text-center text-sm">
+        <footer className="w-full py-6 border-t-4 border-black bg-blue-400 text-black text-lg font-extrabold text-center shadow-[8px_8px_0_0_#000]">
           &copy; {new Date().getFullYear()} Anu Ratnam. All Rights Reserved.
         </footer>
       </body>

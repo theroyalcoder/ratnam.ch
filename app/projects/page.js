@@ -29,22 +29,22 @@ const projects = [
 
 export default function ProjectsPage() {
     return (
-        <main className="max-w-4xl mx-auto py-12 px-4">
-            <h1 className="text-3xl font-bold mb-8">Überzeuge dich von meinen Projekten.</h1>
-            <div className="grid md:grid-cols-2 gap-8">
+        <main className="max-w-6xl mx-auto py-16 px-0 bg-yellow-50">
+            <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 mb-12 text-center">Überzeuge dich von meinen Projekten.</h1>
+            <div className="grid md:grid-cols-2 gap-12">
                 {projects.map((project) => (
-                    <div key={project.id} className="bg-white rounded shadow p-4">
-                        <div className="relative w-full h-40 mb-4">
+                    <div key={project.id} className="bg-white border-4 border-black shadow-[8px_8px_0_0_#000] p-6 flex flex-col">
+                        <div className="relative w-full h-48 mb-6 border-4 border-black shadow-[4px_4px_0_0_#000] bg-yellow-100">
                             <Image
                                 src={project.image}
                                 alt={project.title}
                                 layout="fill"
                                 objectFit="contain"
-                                className="rounded"
+                                className=""
                             />
                         </div>
-                        <h2 className="text-xl text-gray-600 font-semibold mb-2">{project.title}</h2>
-                        <p className="text-gray-600">{project.description}</p>
+                        <h2 className="text-2xl font-extrabold text-black mb-4">{project.title}</h2>
+                        <p className="text-lg text-black flex-1">{project.description}</p>
                     </div>
                 ))}
             </div>
