@@ -27,7 +27,7 @@ export default function Home() {
           </div>
           {/* Rechte Seite: Bild */}
           <div className="flex-1 min-w-[200px] flex justify-center items-center">
-            <Image src="/profile.png" alt="profile picture" width={300} height={300} priority />
+            <Image src="/profile.png" alt="profile picture" width={300} height={300} priority className="rounded-xl" />
           </div>
         </div>
 

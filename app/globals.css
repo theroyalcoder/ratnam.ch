@@ -15,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #2d2d2d;
+    --background: #323232;
     --foreground: #ededed;
   }
 }
@@ -55,4 +55,10 @@ body {
   .text-navlink {
     color: #fff;
   }
+}
+
+/* Footer-Stil */
+footer {
+  background-color: var(--background);
+  color: var(--foreground);
 }
