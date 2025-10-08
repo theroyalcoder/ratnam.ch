@@ -3,26 +3,13 @@ import Link from 'next/link';
 
 export default function ContactPage() {
     return (
-        <main style={{ padding: '2rem' }}>
-            <h1>Contact Us</h1>
-            <form style={{ maxWidth: 400 }}>
-                <div style={{ marginBottom: '1rem' }}>
-                    <label htmlFor="name">Name</label><br />
-                    <input id="name" name="name" type="text" required style={{ width: '100%' }} />
-                </div>
-                <div style={{ marginBottom: '1rem' }}>
-                    <label htmlFor="email">Email</label><br />
-                    <input id="email" name="email" type="email" required style={{ width: '100%' }} />
-                </div>
-                <div style={{ marginBottom: '1rem' }}>
-                    <label htmlFor="message">Message</label><br />
-                    <textarea id="message" name="message" rows={5} required style={{ width: '100%' }} />
-                </div>
-                <button type="submit">Send</button>
-            </form>
-            <br></br>
-            <Link href="/privacy" className="text-blue-600 hover:underline font-semibold">Datenschutzerklärung</Link>
-          
+        <main className="max-w-2xl mx-auto py-16 px-0 bg-yellow-50">
+            <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 mb-12 text-center">Lass uns zusammenarbeiten!</h1>
+            <div className="bg-white border-4 border-black shadow-[8px_8px_0_0_#000] p-6 mb-8 text-lg text-black text-center">
+                Du kannst mich direkt per E-Mail erreichen:<br />
+                <a href="mailto:contact@ratnam.ch" className="font-extrabold text-blue-700 underline">contact@ratnam.ch</a>
+            </div>
+            <Link href="/privacy" className="text-lg font-extrabold text-black bg-yellow-300 px-3 py-1 border-4 border-black shadow-[4px_4px_0_0_#000] hover:bg-yellow-400 inline-block">Datenschutzerklärung</Link>
         </main>
     );
 }
