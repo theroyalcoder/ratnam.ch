@@ -233,7 +233,7 @@ function Box({ title, children }) {
 export default function CurriculumPage() {
     return (
         <main className="max-w-6xl mx-auto py-16 px-0 bg-yellow-50">
-            <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 mb-12 text-center">Mein Werdegang & Kompetenzen</h1>
+            <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 mb-12 text-center">Entdecke meinen Weg und was mich antreibt.</h1>
             <h2 className="text-3xl font-extrabold text-black mb-8">Erfahrungen</h2>
             {work.map(({ company, date, title, place, content }) => (
                 <Box key={title} title={title}>
