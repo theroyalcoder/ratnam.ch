@@ -51,10 +51,18 @@ const work = [
             company: "SEMAS IT AG",
             date: "Mai 2025 bis heute",
             title: "IT System Engineer",
-            place: "Zug, Schweiz",
+            place: "Zug, Zug, Schweiz",
             content: ( 
                 <ul>
-                    <li>ToDo</li>
+                    <li>Planung, Aufbau und Betrieb moderner IT-Infrastrukturen auf Basis von Windows Server und VMware</li>
+                    <li>Eigenständige Durchführung von M365-Migrationen (Exchange Online, SharePoint, Teams, Azure AD) inklusive Konzept, Umsetzung und Nachbetreuung</li>
+                    <li>Implementierung und Optimierung hybrider Cloud-Architekturen für reibungslose Integration zwischen On-Premise und Cloud</li>
+                    <li>Entwicklung und Umsetzung effizienter IT-Lösungen und Automatisierungskonzepte für Kunden</li>
+                    <li>Strategische Beratung bei Infrastruktur-, Cloud- und Sicherheitsprojekten</li>
+                    <li>Aktive Mitgestaltung bei Technologieentscheidungen, Produktstrategien und Prozessstandardisierung</li>
+                    <li>Systematische Analyse und Behebung von Infrastrukturproblemen mit Fokus auf Stabilität, Sicherheit und Performance</li>
+                    <li>Administration von Active Directory, Gruppenrichtlinien und Berechtigungsstrukturen in komplexen Umgebungen</li>
+                    <li>Erstellung und Pflege präziser technischer Dokumentationen für Projekte und Systeme</li>
                 </ul>
             ),
         },
@@ -82,7 +90,7 @@ const work = [
             company: "Infors AG",
             date: "Sep. 2016 - Sep. 2020",
             title: "IT-System Spezialist",
-            place: "Bottmingen, BL, Schweiz",
+            place: "Bottmingen, Basel-Landschaft, Schweiz",
             content: ( 
                 <ul>
                     <li>Technische Umsetzung und Unterstützung auf folgenden Plattformen: M365, CRM, ERP (Infor COM), Azure, TeamViewer, CI-Sign (Signaturlösung)</li>
@@ -102,9 +110,10 @@ const work = [
             company: "Militär",
             date: "Okt. 2015 - Aug. 2016",
             title: "Wachtmeister (Unteroffizier)",
-            place: "Raum Schweiz",
+            place: "Frauenfeld, Thurgau, Schweiz",
             content: ( 
                 <ul>
+                    <li>Rekrutenschule, Unteroffiziersschule und Abverdienen</li>
                     <li>Entwicklung, Wartung und Unterstützung des militärischen Führungs- und Informationssystems (Windows Server-basiert)</li>
                     <li>Ausbildung von Soldaten und Führung einer Gruppe von 8-25 Soldaten</li>
                 </ul>
@@ -115,7 +124,7 @@ const work = [
             company: "save & serve GmbH",
             date: "2011 - 2015",
             title: "Lehre als Informatiker EFZ Generalist",
-            place: "Hölstein, BL, Schweiz",
+            place: "Hölstein, Basel-Landschaft, Schweiz",
             content: ( 
                 <ul>
                     <li>Vollständiges Aufsetzen von Computern, inkl. Hardware und Peripherie</li>
@@ -232,7 +241,7 @@ function Box({ title, children }) {
 
 export default function CurriculumPage() {
     return (
-        <main className="max-w-6xl mx-auto py-16 px-0 bg-yellow-50">
+        <main className="max-w-6xl mx-auto py-16 px-0">
             <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 mb-12 text-center">Entdecke meinen Weg und was mich antreibt.</h1>
             <h2 className="text-3xl font-extrabold text-black mb-8">Erfahrungen</h2>
             {work.map(({ company, date, title, place, content }) => (

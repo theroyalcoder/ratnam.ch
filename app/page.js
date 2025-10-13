@@ -4,16 +4,16 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans min-h-screen bg-yellow-50 p-0">
+    <div className="font-sans min-h-screen p-0">
       <main className="flex flex-col w-full max-w-6xl mx-auto gap-16 items-center py-12">
         <div className="flex flex-col md:flex-row gap-16 w-full">
           {/* Linke Seite: Text und Buttons */}
           <div className="flex-1 flex flex-col gap-6 items-center md:items-start">
             <span className="bg-red-400 text-black border-4 border-black shadow-[4px_4px_0_0_#000] px-4 py-2 font-extrabold text-lg uppercase mb-4">Engineering · Development · Team-Player</span>
             <div className="text-3xl font-extrabold text-black mb-2">Ich kann dein Unternehmen dabei unterstützen</div>
-            <h1 className="text-5xl font-extrabold text-black bg-yellow-300 border-4 border-black shadow-[4px_4px_0_0_#000] px-2 py-1 mb-4">Aufgaben zu bewältigen und Lösungen zu finden.</h1>
+            <h1 className="text-5xl font-extrabold text-black bg-blue-400 border-4 border-black shadow-[4px_4px_0_0_#000] px-2 py-1 mb-4">Aufgaben zu bewältigen und Lösungen zu finden.</h1>
             <div className="flex gap-6 mt-2">
-              <Link href="/curriculum" className="bg-blue-400 text-black border-4 border-black shadow-[4px_4px_0_0_#000] px-6 py-3 font-extrabold text-lg hover:bg-blue-500">Lebenslauf</Link>
+              <Link href="/curriculum" className="bg-yellow-300 text-black border-4 border-black shadow-[4px_4px_0_0_#000] px-6 py-3 font-extrabold text-lg hover:bg-yellow-400">Lebenslauf</Link>
               <Link href="/projects" className="bg-yellow-300 text-black border-4 border-black shadow-[4px_4px_0_0_#000] px-6 py-3 font-extrabold text-lg hover:bg-yellow-400">Projekte</Link>
             </div>
           </div>
