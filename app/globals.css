@@ -2,7 +2,7 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
-  --background: #ffffff;
+  --background: #fefce8;
   --foreground: #000000;
 }
 
@@ -13,17 +13,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Eigener Gradient für Badge und Text */
-.my-gradient {
-  background: linear-gradient(to right, #3b82f6, #22c55e); /* entspricht from-blue-500 to-green-500 */
 }
 
 /* Text-Gradient für Überschriften */
@@ -46,14 +39,9 @@ body {
 .text-navlink:hover {
   text-decoration: underline;
 }
-@media (prefers-color-scheme: dark) {
-  .text-navlink {
-    color: #fff;
-  }
-}
 
 /* Footer-Stil */
 footer {
-  background-color: var(--background);
+  background-color: #22c55e;
   color: var(--foreground);
 }
