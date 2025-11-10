@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [showB, setShowB] = useState(false);
+
   return (
     <div className="font-sans min-h-screen p-0">
       <main className="flex flex-col w-full max-w-6xl mx-auto gap-16 items-center py-12">
@@ -18,23 +21,29 @@ export default function Home() {
             </div>
           </div>
           {/* Rechte Seite: Bild */}
-          <div className="flex-1 min-w-[200px] flex justify-center items-center">
-            <div className="relative w-[320px] h-[320px]">
+          <div className="flex-1 flex justify-center items-center">
+            {/* Tap-to-toggle container: click or keyboard toggles; hover still works */}
+            <div
+              role="button"
+              tabIndex={0}
+              aria-pressed={showB}
+              onClick={() => setShowB((s) => !s)}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setShowB((s) => !s); } }}
+              className="relative w-full max-w-[320px] aspect-square group"
+            >
               <Image
                 src="/profile_a.png"
                 alt="profile picture a"
-                width={320}
-                height={320}
+                fill
                 priority
-                className="rounded-none border-4 border-black shadow-[8px_8px_0_0_#000] object-contain absolute inset-0 transition-opacity duration-300 opacity-100"
+                className={`rounded-none border-4 border-black shadow-[8px_8px_0_0_#000] object-contain absolute inset-0 transition-opacity duration-300 ${showB ? 'opacity-0' : 'opacity-100'} group-hover:opacity-0 z-10`}
               />
               <Image
                 src="/profile_b.png"
                 alt="profile picture b"
-                width={320}
-                height={320}
+                fill
                 priority
-                className="rounded-none border-4 border-black shadow-[8px_8px_0_0_#000] object-contain absolute inset-0 transition-opacity duration-300 opacity-0 hover:opacity-100"
+                className={`rounded-none border-4 border-black shadow-[8px_8px_0_0_#000] object-contain absolute inset-0 transition-opacity duration-300 ${showB ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100 z-20`}
               />
             </div>
           </div>
